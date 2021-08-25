@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <Title>Contact form</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="form_styles.css">
+</head>
+  
+  <body>
+      <?php include('email.php') ?>
+    <header class="header">
+      <h1 id="title">Contact form GroenWeb</h1>
+      <p id="description">Fill in the questions below and press 'Submit' to send this form. <br> Inputs with an '*' are required.
+    </header>
+    <form id="survey-form" method="post" name="myemailform" action="email.php">
+      <div class="form-group">
+      <label id="name-label" for="name">*Name<b>:</b></label>
+      <input type="text" id="name" class="input" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">*Email<b>:</b></label>
+        <input type="email" id="email" class="input" placeholder="Enter your email" required>
+      </div>
+      <hr id="divide-line">
+      <div class="form-group">
+        <label id="number-label" for="number">Work years:</label>
+        <input type="number" id="number" class="input" placeholder="Enter your work years" min="0" max="99">
+        </div>
+      <div class="form-group">
+        <label id="job-label" for="job">Job:</label>
+        <select id="dropdown" class="dropdown" name="job">
+          <option disabled selected value>Select your job</option>
+          <option value="hr">HR</option>
+          <option value="management">Management</option>
+          <option value="physical-work">Physical work</option>  
+        </select>  
+      </div>
+       
+      <div class="form-group">
+        <p class="section-description">How often do you experience work stress?</p>
+        <label class="radio-full">
+          <input type="radio" value="often" name="work-stress" class="input-radio" checked>Often</label><br>
+        <label class="radio-full">
+          <input type="radio" value="sometimes" name="work-stress" class="input-radio">Sometimes</label><br>
+        <label class="radio-full">
+          <input type="radio" value="never" name="work-stress" class="input-radio">Never</label>
+        </div>
+      
+      <div class="form-group">
+        <p class="section-description">Which of the following work outcomes do you experience? <br> (You can check multiple boxes.)</p>
+        <label class="radio-full">
+          <input type="checkbox" value="autonomy" name="outcomes" class="input-radio">Autonomy</label><br>
+       <label class="radio-full">
+          <input type="checkbox" value="satisfaction" name="outcomes" class="input-radio">Satisfaction</label><br>
+        <label class="radio-full">
+          <input type="checkbox" value="Support" name="outcomes" class="input-radio">Support</label>
+        
+        <div class="form-group">
+          <p class="section-desription">Any further remarks can be entered below:</p>
+          <textarea id="comments" class="commentsarea" name="comment" placeholder="Enter your comments here...">
+          </textarea>
+        </div>
+        
+        <div style="text-align: center";>
+          <button "submit" id="submit" onClick="submit">Submit</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
