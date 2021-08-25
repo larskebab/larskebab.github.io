@@ -139,6 +139,10 @@ iframe {
 @media (max-width: 414px) {
     #PageTitle {
         font-size: 14vw;
+        margin-top: 50px;
+    }
+    #MobileTitle {
+        margin-top: 200px;
     }
 }
 
