@@ -29,12 +29,6 @@ html, body {
     display: none;
 }
 
-@media screen and (max-width: 414px) {
-    .navbar a.icon {
-        display: none;
-    }
-}
-
 .navbar ul {
     list-style-type: none;
     overflow: hidden;
@@ -86,24 +80,6 @@ a.navbutton:hover {
         display: block;
     }
 }
-
-@media screen and (max-width: 414px) {
-    .navbar.responsive {
-        position: relative;
-    }
-    .navbar.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .navbar.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    
-}
-
 
 
 /* body */
