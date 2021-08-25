@@ -16,6 +16,7 @@ html, body {
     height: 100%;
     margin: 0;
     top: -1;
+    left: -1;
     transition: 0.5s;
 }
 
